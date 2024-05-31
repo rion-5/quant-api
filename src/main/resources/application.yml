@@ -1,8 +1,8 @@
 server:
   port: 8443
   ssl:
-    key-store: classpath:ssl/rion5.kro.kr.p12
-    key-store-password: altpajswl
+    key-store: classpath:ssl/keystore.p12
+    key-store-password: dmswns
     key-store-type: PKCS12
 spring:
   datasource:
@@ -12,5 +12,5 @@ spring:
       maxLifetime: 580000
       validation-timeout: 10000
     password: quant14
-    url: jdbc:postgresql://localhost:5432/quantdb
+    url: jdbc:postgresql://rion5.kro.kr:8080/quantdb
     username: quant

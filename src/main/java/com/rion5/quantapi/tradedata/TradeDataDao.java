@@ -20,7 +20,7 @@ public class TradeDataDao {
 
 	public List<TradeData> getTradeDataList(String symbol, LocalDate start_date, LocalDate end_date) {
 		String query = "SELECT symbol,trading_date, open,high,low,close,volume,adjusted,insert_date FROM stock WHERE symbol= :symbol "
-				+ " AND trading_date between :start_date and :end_date ;";
+				+ " AND trading_date between :start_date and :end_date order by trading_date ;";
 //		System.out.println(query);
 		MapSqlParameterSource param = new MapSqlParameterSource();
 		param.addValue("symbol", symbol);
