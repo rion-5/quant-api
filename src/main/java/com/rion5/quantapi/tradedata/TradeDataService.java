@@ -46,4 +46,16 @@ public class TradeDataService {
 		return multiple1;
 	}
 
+	public Multiple getStock(String symbol, LocalDate start_date, LocalDate end_date) {
+		List<TradeData> tradeData = tradeDataDao.getTradeDataList(symbol, start_date, end_date);
+
+		List<Series> seriesList = tradeData.stream()
+		    .map(trade -> new Series(trade.trading_date().toString(), trade.close()))
+		    .toList();
+
+		Multiple multiple = new Multiple(symbol, seriesList);
+		
+		return multiple;
+	}
+
 }

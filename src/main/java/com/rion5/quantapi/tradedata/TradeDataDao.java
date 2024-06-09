@@ -31,4 +31,5 @@ public class TradeDataDao {
 		return tradeData;
 
 	}
+
 }

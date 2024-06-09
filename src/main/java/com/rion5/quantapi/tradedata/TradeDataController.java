@@ -59,5 +59,14 @@ public class TradeDataController {
 		return ResponseEntity.ok(tradeDataService.getTradeDataForChart(symbol, start_date, end_date));
 
 	}
+
+	@GetMapping(value = "stock")
+	public ResponseEntity<Multiple> getStock(@RequestParam(value = "symbol") String symbol,
+			@RequestParam(value = "start_date") LocalDate start_date,
+			@RequestParam(value = "end_date") LocalDate end_date) {
+
+		return ResponseEntity.ok(tradeDataService.getStock(symbol, start_date, end_date));
+
+	}
 	
 }
