@@ -1,9 +1,9 @@
 server:
   port: 8443
-  ssl:
-    key-store: classpath:ssl/keystore.p12
-    key-store-password: dmswns
-    key-store-type: PKCS12
+  # ssl:                                        #개발환경에서는 http 사용
+  #   key-store: classpath:ssl/keystore.p12     #개발환경에서는 http 사용
+  #   key-store-password: dmswns                #개발환경에서는 http 사용
+  #   key-store-type: PKCS12                    #개발환경에서는 http 사용
 spring:
   datasource:
     hikari:
@@ -12,5 +12,5 @@ spring:
       maxLifetime: 580000
       validation-timeout: 10000
     password: quant14
-    url: jdbc:postgresql://rion5.kro.kr:8080/quantdb
+    url: jdbc:postgresql://localhost:5432/quantdb  #개발환경 localhost:5432 사용 / 운영환경 rion5.kro.kr:8080
     username: quant
