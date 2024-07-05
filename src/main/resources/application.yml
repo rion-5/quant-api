@@ -12,5 +12,5 @@ spring:
       maxLifetime: 580000
       validation-timeout: 10000
     password: quant14
-    url: jdbc:postgresql://localhost:5432/quantdb  #개발환경 localhost:5432 사용 / 운영환경 rion5.kro.kr:8080
+    url: jdbc:postgresql://localhost:8080/quantdb  #개발환경 localhost:8080 사용 / 운영환경 rion5.kro.kr:8080
     username: quant
