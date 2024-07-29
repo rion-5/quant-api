@@ -20,8 +20,10 @@ public class UserDao {
 	KeyHolder keyHolder = new GeneratedKeyHolder();
 
 	public User newUser(User user) {
-		String query = "INSERT INTO users (name,email,password,created_date,activation) "
-				+ "VALUES (:name,:email,:password,:created_date,:activation); ";
+		String query = """
+                INSERT INTO users (name,email,password,created_date,activation) \
+                VALUES (:name,:email,:password,:created_date,:activation); \
+                """;
 
 		MapSqlParameterSource param = new MapSqlParameterSource();
 		param.addValue("name", user.getName());
@@ -69,8 +71,10 @@ public class UserDao {
 	}
 
 	public int updateUser(User user) {
-		String query = "UPDATE USERS SET NAME=:name,EMAIL=:email,PASSWORD=:password "
-				+ ",CREATED_DATE=:created_date, ACTIVATION=:activation WHERE id=:id; ";
+		String query = """
+                UPDATE USERS SET NAME=:name,EMAIL=:email,PASSWORD=:password \
+                ,CREATED_DATE=:created_date, ACTIVATION=:activation WHERE id=:id; \
+                """;
 
 		MapSqlParameterSource param = new MapSqlParameterSource();
 		param.addValue("id", user.getId());
