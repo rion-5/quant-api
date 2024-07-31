@@ -42,14 +42,14 @@ public class TradeDataController {
 		}
 	}
 	
-//	@GetMapping(value = "tradeData")
-//	public ResponseEntity<List<TradeData>> getTradeDataList(@RequestParam(value = "symbol") String symbol,
-//			@RequestParam(value = "start_date") LocalDate start_date,
-//			@RequestParam(value = "end_date") LocalDate end_date) {
-//
-//		return ResponseEntity.ok(tradeDataService.getTradeDataList(symbol, start_date, end_date));
-//
-//	}
+	@GetMapping(value = "stockData")
+	public ResponseEntity<List<TradeData>> getTradeDataList(@RequestParam(value = "symbol") String symbol,
+			@RequestParam(value = "start_date") LocalDate start_date,
+			@RequestParam(value = "end_date") LocalDate end_date) {
+
+		return ResponseEntity.ok(tradeDataService.getTradeDataList(symbol, start_date, end_date));
+
+	}
 	
 	@GetMapping(value = "tradeDataForChart")
 	public ResponseEntity<List<Multiple>> getTradeDataForChart(@RequestParam(value = "symbol") String symbol,
