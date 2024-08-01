@@ -1,9 +1,9 @@
 server:
   port: 8443
-  # ssl:                                        #개발환경에서는 http 사용
-  #     key-store: classpath:ssl/keystore.p12     #개발환경에서는 http 사용
-  #     key-store-password: dmswns                #개발환경에서는 http 사용
-  #     key-store-type: PKCS12                    #개발환경에서는 http 사용
+  ssl:                                        #개발환경에서는 http 사용
+      key-store: classpath:ssl/keystore.p12     #개발환경에서는 http 사용
+      key-store-password: dmswns                #개발환경에서는 http 사용
+      key-store-type: PKCS12                    #개발환경에서는 http 사용
 spring:
   datasource:
     hikari:
